@@ -26,10 +26,4 @@ main {
   width: 100%;
   margin-left: 0;
 }
-
-@media only screen and (orientation: portrait) {
-  main {
-    margin-top: 260px;
-  }
-}
 </style>

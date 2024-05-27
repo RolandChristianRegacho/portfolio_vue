@@ -5,7 +5,7 @@ main {
   margin-top: 60px;
   width: 100%;
   max-width: 1200px;
-  overflow: auto;
+  overflow: hidden;
   text-align: left;
 }
 

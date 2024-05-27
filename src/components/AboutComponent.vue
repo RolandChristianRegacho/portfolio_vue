@@ -77,7 +77,7 @@ export default {
 
 <style scoped>
 .about {
-  width: 1000px;
+  width: 100%;
   height: 600px;
   padding-top: 200px;
 }
@@ -106,5 +106,20 @@ table {
   width: 500px;
   padding-left: 50px;
   font-size: 25px;
+}
+
+@media only screen and (orientation: portrait) {
+  .about {
+    padding-top: 50px;
+  }
+  .about-left {
+    width: 100%;
+    margin-bottom: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .about-right {
+    width: 100%;
+  }
 }
 </style>
