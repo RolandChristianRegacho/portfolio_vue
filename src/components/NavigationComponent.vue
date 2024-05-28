@@ -2,15 +2,33 @@
   <div class="navigation" id="navigation">
     <button @click="scrollTo('home')">Home</button>
     <button @click="scrollTo('about')">About</button>
-    <button>Projects</button>
+    <button @click="scrollTo('projects')">Projects</button>
     <button>Contact</button>
+  </div>
+  <div class="navigation_mobile" id="navigation">
+    <button class="icon" @click="scrollTo('home')"><AnFilledHome /></button>
+    <button @click="scrollTo('about')"><AnFilledInfoCircle /></button>
+    <button @click="scrollTo('projects')"><AnFilledFolder /></button>
+    <button><AnFilledContacts /></button>
   </div>
 </template>
 
 <script>
+import {
+  AnFilledHome,
+  AnFilledInfoCircle,
+  AnFilledFolder,
+  AnFilledContacts
+} from '@kalimahapps/vue-icons'
+
 export default {
   name: 'NavigationComponent',
-  components: {},
+  components: {
+    AnFilledHome,
+    AnFilledInfoCircle,
+    AnFilledFolder,
+    AnFilledContacts
+  },
   methods: {
     scrollTo(form) {
       this.$router.push({ name: form })
@@ -44,5 +62,26 @@ button:hover {
   justify-content: center;
   background: rgb(14, 84, 177);
   height: 60px;
+}
+
+.navigation_mobile {
+  display: none;
+}
+
+.icon {
+  font-size: 30px;
+}
+
+@media only screen and (orientation: portrait) {
+  .navigation {
+    display: none;
+  }
+
+  .navigation_mobile {
+    display: flex;
+    justify-content: center;
+    background: rgb(14, 84, 177);
+    height: 60px;
+  }
 }
 </style>

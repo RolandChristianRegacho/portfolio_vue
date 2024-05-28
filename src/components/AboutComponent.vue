@@ -90,6 +90,7 @@ p {
   float: left;
   width: 50%;
   padding-right: 50px;
+  padding-left: 50px;
 }
 
 .about-right {
