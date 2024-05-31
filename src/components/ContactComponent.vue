@@ -54,7 +54,6 @@ export default {
   methods: {
     copyElement(form) {
       if (copyToClipboard(document.getElementById(form))) {
-        console.log('copied')
         $('#msgNotif').html('Copied!')
         $.when($('#msgNotif').fadeIn(500)).done(() => {
           setTimeout(() => {
@@ -62,7 +61,12 @@ export default {
           }, 3000)
         })
       } else {
-        console.log('Copy failed')
+        $('#msgNotif').html('Copy failed!')
+        $.when($('#msgNotif').fadeIn(500)).done(() => {
+          setTimeout(() => {
+            $('#msgNotif').fadeOut(500)
+          }, 3000)
+        })
       }
     },
     goTo(form) {
@@ -76,7 +80,6 @@ export default {
 function copyToClipboard(elem) {
   // create hidden text element, if it doesn't already exist
   var targetId = '_hiddenCopyText_'
-  console.log(elem)
   var isInput = elem.tagName === 'INPUT' || elem.tagName === 'TEXTAREA'
   var origSelectionStart, origSelectionEnd
   if (isInput) {
