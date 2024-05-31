@@ -9,7 +9,5 @@ $(() => {
 </script>
 
 <template>
-  <main>
-    <AboutComponent />
-  </main>
+  <AboutComponent />
 </template>

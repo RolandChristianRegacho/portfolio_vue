@@ -3,7 +3,7 @@
     <h3>Hi!</h3>
     <h1>I'm Roland</h1>
     <h2>Web Developer</h2>
-    <button onclick="goTo('twitter');"><AkTwitterFill /></button>
+    <button onclick="goTo('discord');"><AkDiscordFill /></button>
     <button onclick="goTo('facebook');"><AkFacebookFill /></button>
     <button onclick="goTo('contact');"><AkGoogleFill /></button>
     <button onclick="goTo('contact');"><BsSkype /></button>
@@ -13,7 +13,7 @@
 
 <script>
 import {
-  AkTwitterFill,
+  AkDiscordFill,
   AkFacebookFill,
   AkGoogleFill,
   BsSkype,
@@ -23,7 +23,7 @@ import {
 export default {
   name: 'HomeComponent',
   components: {
-    AkTwitterFill,
+    AkDiscordFill,
     AkFacebookFill,
     AkGoogleFill,
     BsSkype,

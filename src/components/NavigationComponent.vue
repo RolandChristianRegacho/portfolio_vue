@@ -3,13 +3,13 @@
     <button @click="scrollTo('home')">Home</button>
     <button @click="scrollTo('about')">About</button>
     <button @click="scrollTo('projects')">Projects</button>
-    <button>Contact</button>
+    <button @click="scrollTo('contact')">Contact</button>
   </div>
   <div class="navigation_mobile" id="navigation">
     <button class="icon" @click="scrollTo('home')"><AnFilledHome /></button>
     <button @click="scrollTo('about')"><AnFilledInfoCircle /></button>
     <button @click="scrollTo('projects')"><AnFilledFolder /></button>
-    <button><AnFilledContacts /></button>
+    <button @click="scrollTo('contact')"><AnFilledContacts /></button>
   </div>
 </template>
 
@@ -51,7 +51,7 @@ button {
 }
 
 button:hover {
-  background: rgb(14, 44, 157);
+  background: rgb(14, 84, 177);
   font-size: 22px;
   box-shadow: 3px 0px 5px 3px rgba(20, 20, 20, 1);
   transition-duration: 1s;
@@ -60,7 +60,7 @@ button:hover {
 .navigation {
   display: flex;
   justify-content: center;
-  background: rgb(14, 84, 177);
+  background: #008cba;
   height: 60px;
 }
 

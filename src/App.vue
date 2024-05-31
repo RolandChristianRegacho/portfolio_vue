@@ -8,7 +8,11 @@ import NavigationComponent from './components/NavigationComponent.vue'
   </header>
 
   <main id="main">
-    <RouterView />
+    <router-view v-slot="{ Component, route }">
+      <transition :name="route.meta.transition || 'fade'" mode="">
+        <component :is="Component" :key="route.path" />
+      </transition>
+    </router-view>
   </main>
 </template>
 

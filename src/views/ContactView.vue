@@ -1,5 +1,5 @@
 <script setup>
-import HomeComponent from '@/components/HomeComponent.vue'
+import ContactComponent from '@/components/ContactComponent.vue'
 import $ from 'jquery'
 import calculateSize from '@/additional_scripts/calculate-width'
 
@@ -9,5 +9,6 @@ $(() => {
 </script>
 
 <template>
-  <HomeComponent />
+  <NewMessageNotifPage class="notification-popup" />
+  <ContactComponent />
 </template>
