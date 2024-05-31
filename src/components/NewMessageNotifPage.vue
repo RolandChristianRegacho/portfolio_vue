@@ -19,5 +19,6 @@ export default {
 button {
   border: none;
   outline: none;
+  font-size: 1.5em;
 }
 </style>

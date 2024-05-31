@@ -9,6 +9,5 @@ $(() => {
 </script>
 
 <template>
-  <NewMessageNotifPage class="notification-popup" />
   <ContactComponent />
 </template>

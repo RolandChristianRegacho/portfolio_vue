@@ -40,6 +40,7 @@ import {
   BsSkype,
   BsTelephoneFill
 } from '@kalimahapps/vue-icons'
+import $ from 'jquery'
 
 export default {
   name: 'ContactComponent',
@@ -54,8 +55,14 @@ export default {
     copyElement(form) {
       if (copyToClipboard(document.getElementById(form))) {
         console.log('copied')
+        $('#msgNotif').html('Copied!')
+        $.when($('#msgNotif').fadeIn(500)).done(() => {
+          setTimeout(() => {
+            $('#msgNotif').fadeOut(500)
+          }, 3000)
+        })
       } else {
-        console.log('copy failed')
+        console.log('Copy failed')
       }
     },
     goTo(form) {
